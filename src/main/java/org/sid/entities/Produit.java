@@ -12,17 +12,17 @@ public class Produit implements Serializable{
 	private Long id;
 	private String designation;
 	private double prix;
-	private int quantité;
+	private int quantite;
 	
 	public Produit() {
 		super();
 	}
 
-	public Produit(String designation, double prix, int quantité) {
+	public Produit(String designation, double prix, int quantite) {
 		super();
 		this.designation = designation;
 		this.prix = prix;
-		this.quantité = quantité;
+		this.quantite = quantite;
 	}
 
 	public Long getId() {
@@ -49,17 +49,17 @@ public class Produit implements Serializable{
 		this.prix = prix;
 	}
 
-	public int getQuantité() {
-		return quantité;
+	public int getQuantite() {
+		return quantite;
 	}
 
-	public void setQuantité(int quantité) {
-		this.quantité = quantité;
+	public void setQuantite(int quantite) {
+		this.quantite = quantite;
 	}
 
 	@Override
 	public String toString() {
-		return "Produit [id=" + id + ", designation=" + designation + ", prix=" + prix + ", quantité=" + quantité + "]";
+		return "Produit [id=" + id + ", designation=" + designation + ", prix=" + prix + ", quantite=" + quantite + "]";
 	}
 	
 	

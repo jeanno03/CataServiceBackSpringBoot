@@ -6,42 +6,23 @@
 <link rel="stylesheet" type="text/css" href="css/myStyle.css"/>
 <title>Catalogue</title>
 </head>
-<body ng-app="MyApp" ng-controller="MyController">
-<div class="container spacer">
-Mot Clé : <input type="text" ng-model="motCle">
-<button ng-click="chercherProduits()">Charger</button>
-</div>
-<div class="container">
-<table class="table table-striped">
-<thead>
-<tr>
-<th>ID</th>
-<th>Désignation</th>
-<th>Prix</th>
-<th>Quantité</th>
-</tr>
-</thead>
-<tbody>
-<tr ng-repeat="p in pageProduits.content">
-<td>{{p.id}}</td>
-<td>{{p.designation}}</td>
-<td>{{p.prix}}</td>
-<td>{{p.quantite}}</td>
-</tr>
-</tbody>
-</table>
-<div class="container">
-<ul class="nav nav-pills">
-<!-- <li ng-repeat="p in pages track by $index" class="nav-item"> -->
-<li ng-class="{active:$index==pageCourante}" ng-repeat="p in pages track by $index" class="clickable">
-<a ng-click="goToPage($index)">{{$index}}</a>
-</li>
-</ul>
-</div>
+
+<body ng-app="MyApp">
 <div>
-La page courante est : {{pageCourante}}
-</div>
-</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" ui-sref="home">Home</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a ui-sref="chercher">Chercher</a></li>
+      <li><a ui-sref="newProduit">Nouveau</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div ui-view></div>
 <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
 <script type="text/javascript" src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>

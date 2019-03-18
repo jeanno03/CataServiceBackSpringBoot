@@ -1,1 +1,11 @@
-{"plugins":{"angular":{}},"libs":["browser","ecma5"],"ide":{}}
+{
+  "plugins": {
+    "angular1": {
+      
+    }
+  },
+  "libs": [
+    "browser",
+    "ecma5"
+  ]
+}
